@@ -662,7 +662,7 @@ public class MultiImageChooserActivity extends AppCompatActivity implements
             int index = fileName.lastIndexOf('.');
             String name = fileName.substring(0, index);
             String ext = fileName.substring(index);
-            File file = File.createTempFile("tmp_" + name, ext);
+            File file = File.createTempFile("tmp_" + name + "_", ext);
             OutputStream outStream = new FileOutputStream(file);
 
             if (ext.compareToIgnoreCase(".png") == 0) {
